@@ -23,7 +23,7 @@ def preprocess_text(text):
 
 # Chargement du fichier de connaissances (FAQ simple)
 def load_knowledge_base(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, 'r', encoding='utf-8', errors="replace") as f:
         corpus = f.read()
     sentences = nltk.sent_tokenize(corpus)
     return sentences
